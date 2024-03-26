@@ -21,11 +21,11 @@ class ShoppingService {
     });
   }
 
-  void addShoppingList(String itemName) {
+  void addShoppingItem(String itemName) {
     _database.push().set({'nama': itemName});
+  }
 
-    Future<void> removeShopppingItem(String key) async {
-      await _database.child(key).remove();
-    }
+  Future<void> removeShopppingItem(String key) async {
+    await _database.child(key).remove();
   }
 }
